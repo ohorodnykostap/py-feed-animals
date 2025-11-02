@@ -42,7 +42,4 @@ class Dog(Animal):
 
 def feed_animals(animals: List[Animal]) -> int:
     """Feed all hungry animals and return total eaten food points."""
-    total = 0
-    for animal in animals:
-        total += animal.feed()
-    return total
+    return sum(animal.feed() for animal in animals)
